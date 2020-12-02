@@ -16,5 +16,11 @@ Examples:
 - XO("zzoo") ➞ False
 """
 def XO(txt):
-    # Your code here
+    txt_lower.lower()
+    return txt_lower.count('x') == txt_lower.count('o')
 
+#
+
+print(XO('ooxx')) # true
+print(XO('xooxx')) #false
+print(XO('xxOxo'))
