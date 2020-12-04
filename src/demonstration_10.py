@@ -14,5 +14,26 @@ Notes:
 - There won't be any awkward decimal numbers, only 0.5 to deal with.
 """
 def get_discounts(nums, percentage):
-    # Your code here
+    discount_percent = int(percentage[ : -1]) / 100
+    new_nums = []
+    
+    for num in nums:
+        # apply the discount
+        new_nums.append( num * discount_percent )
+    return new_nums
 
+print(get_discounts([10, 20, 40, 80], '75%'))
+
+
+# pass by reference vs. pass by copy (instance)
+# REFERENCE means using the original numbers. The original will be manipulated.
+# INSTANCE/COPY will take a copy and not mutate the original one
+# you want to make sure that you aren't mutating an existing array. Be aware of the side effects
+
+# Example:
+    # for i in range(len(nums)):
+    #     nums[i] = nums[i] * percent 
+    # print(nums)
+    # return nums
+    
+# this manipulates the original and you lose the original data.
