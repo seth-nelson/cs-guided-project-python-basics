@@ -10,6 +10,15 @@ Examples:
 - num_args(True, False) ➞ 2
 - num_args({}) ➞ 1
 """
-def num_args():
-    # Your code here
 
+# positional vs named (keyword-only) argument:
+    #arg1 and arg2 are positional. named_arg = named (must have input)
+    # def num_args(arg1, arg2, named_arg=None):
+    
+def num_args(*args, arg2):
+    print(len(args))
+    print(arg2)
+    return
+    
+num_args('foo', 'bar', arg2='This is a keyword arg!')
+# num_args('foo')
